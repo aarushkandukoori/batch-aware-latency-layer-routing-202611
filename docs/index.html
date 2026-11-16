@@ -75,14 +75,14 @@
   <section>
     <div class="disclosure"><b style="color:var(--ink)">AI assistance disclosure.</b>
       AI tools (Claude) were used for literature synthesis, ideation, and draft preparation
-      of this proposal, its code, and this page. The authors reviewed and take responsibility
+      of this proposal, its code, and this page. An AI review checked the draft before release, and the authors take responsibility
       for all content. No experimental results are claimed; all datasets in the repository
       are synthetic and labeled as such.</div>
   </section>
 
   <section>
     <h2>Abstract</h2>
-    <div class="abstract">Dynamic layer routing lets a language model choose, per token, which layers to execute, with the aim of lowering inference cost. Per-token savings do not always become wall-clock savings when requests are batched. A layer must still be run, and its weights loaded, if any sequence in the batch needs it. We propose an early-stage framework that adds a simple batch-aware latency model to the training objective of a routed network. The model separates a per-layer fixed cost (weight loading) from a per-token compute cost, and gives a closed-form, differentiable expected batch latency as a function of per-layer visit probabilities. We describe a Lagrangian-constrained training objective, a planned comparison against FLOP-based and per-token latency penalties, and a plan for using learned latency predictors from the neural architecture search literature as a drop-in replacement for the analytic cost table. This is a proposal only: no experiments have been run, and the proposed repository uses clearly labeled synthetic data. We are seeking expert feedback on whether the problem formulation matches real hardware behavior. AI tools (Claude) were used for literature synthesis, ideation, and draft preparation, and the authors reviewed and take responsibility for all content.</div>
+    <div class="abstract">Dynamic layer routing lets a language model choose, per token, which layers to execute, with the aim of lowering inference cost. Per-token savings do not always become wall-clock savings when requests are batched. A layer must still be run, and its weights loaded, if any sequence in the batch needs it. We propose an early-stage framework that adds a simple batch-aware latency model to the training objective of a routed network. The model separates a per-layer fixed cost (weight loading) from a per-token compute cost, and gives a closed-form, differentiable expected batch latency as a function of per-layer visit probabilities. We describe a Lagrangian-constrained training objective, a planned comparison against FLOP-based and per-token latency penalties, and a plan for using learned latency predictors from the neural architecture search literature as a drop-in replacement for the analytic cost table. This is a proposal only: no experiments have been run, and the proposed repository uses clearly labeled synthetic data. We are seeking expert feedback on whether the problem formulation matches real hardware behavior. AI tools (Claude) were used for literature synthesis, ideation, and draft preparation, and an AI review checked the draft before release, and the authors take responsibility for all content.</div>
   </section>
 
   <section>
@@ -97,7 +97,7 @@
 
   <footer>
     <p>Full proposal: <a href="https://github.com/aarushkandukoori/batch-aware-latency-layer-routing-202611">GitHub repository</a> ·
-       Contact: <a href="mailto:skandukoori@gmail.com">skandukoori@gmail.com</a></p>
+       Contact: <a href="mailto:akanduko@andrew.cmu.edu">akanduko@andrew.cmu.edu</a></p>
   </footer>
 </div>
 <script>

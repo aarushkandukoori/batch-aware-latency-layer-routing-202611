@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Dynamic layer routing lets a language model choose, per token, which layers to execute, with the aim of lowering inference cost. Per-token savings do not always become wall-clock savings when requests are batched. A layer must still be run, and its weights loaded, if any sequence in the batch needs it. We propose an early-stage framework that adds a simple batch-aware latency model to the training objective of a routed network. The model separates a per-layer fixed cost (weight loading) from a per-token compute cost, and gives a closed-form, differentiable expected batch latency as a function of per-layer visit probabilities. We describe a Lagrangian-constrained training objective, a planned comparison against FLOP-based and per-token latency penalties, and a plan for using learned latency predictors from the neural architecture search literature as a drop-in replacement for the analytic cost table. This is a proposal only: no experiments have been run, and the proposed repository uses clearly labeled synthetic data. We are seeking expert feedback on whether the problem formulation matches real hardware behavior. AI tools (Claude) were used for literature synthesis, ideation, and draft preparation, and the authors reviewed and take responsibility for all content.
+Dynamic layer routing lets a language model choose, per token, which layers to execute, with the aim of lowering inference cost. Per-token savings do not always become wall-clock savings when requests are batched. A layer must still be run, and its weights loaded, if any sequence in the batch needs it. We propose an early-stage framework that adds a simple batch-aware latency model to the training objective of a routed network. The model separates a per-layer fixed cost (weight loading) from a per-token compute cost, and gives a closed-form, differentiable expected batch latency as a function of per-layer visit probabilities. We describe a Lagrangian-constrained training objective, a planned comparison against FLOP-based and per-token latency penalties, and a plan for using learned latency predictors from the neural architecture search literature as a drop-in replacement for the analytic cost table. This is a proposal only: no experiments have been run, and the proposed repository uses clearly labeled synthetic data. We are seeking expert feedback on whether the problem formulation matches real hardware behavior. AI tools (Claude) were used for literature synthesis, ideation, and draft preparation, and an AI review checked the draft before release, and the authors take responsibility for all content.
 
 ## Introduction & Motivation
 
@@ -87,7 +87,7 @@ We would use the Lagrangian $\mathcal{L}_{\text{task}}+\lambda\,(T_B(\theta)-\ta
 
 ### AI Assistance Disclosure
 
-AI tools (Claude) were used for literature synthesis, ideation, and draft preparation. The authors reviewed and take responsibility for all content in this proposal, including its citations and mathematical statements.
+AI tools (Claude) were used for literature synthesis, ideation, and draft preparation. An AI review checked the draft before release, and the authors take responsibility for all content in this proposal, including its citations and mathematical statements.
 
 ## Planned Evaluation & Baselines
 
